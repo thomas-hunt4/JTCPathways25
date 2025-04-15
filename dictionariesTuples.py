@@ -55,3 +55,28 @@ print(coordinates[0])
 
 # slicing with a tuple
 print(coordinates[:2])
+
+students = {
+    "Alice": (20, "Math"),
+    "Bob": (22, "Physics"),
+    "Charlie": (19, "Biology")
+}
+
+for name, details in students.items():
+    age, subject = details
+    print(f"{name} is {age} years old and studies {subject}.")
+
+
+# Tuple class
+# 
+# 
+def get_user_info():
+    name = "Alice"
+    age = 30
+    country = "USA"
+    return name, age, country
+
+user = get_user_info()
+print(user)
+
+
