@@ -15,6 +15,12 @@ print(student)
 # print(student("name"))
 # print(student("grade"))
 
+# alt method of dictionary creation using dict
+contact = dict(name="Bob", phone="567-5309", email="bobiscool@bob.com")
+print(contact)
+
+
+# Better method in case a key value doesn't exist. 
 print(student.get("name"))
 print(student.get("grade"))
 
@@ -30,13 +36,30 @@ print(student)
 del student["grade"]
 print(student)
 
+# remove a key alt
+# grade = student.pop('grade')
+print(student)
+
 # iteration through a key
 for key in student:
     print(key)
 
+# return keys from dictionary
+keys = student.keys()
+print(keys)
+
+# return keys and items from dictionary
+items = student.items()
+print(items)
+print("*********TEST REF LINE**********")
+
 # to iterate and return keys and their values. 
 for key, value in student.items():
     print(f"{key}: {value}")
+
+
+for value in student:
+    print(f"{value}")
 
 #                           Tuple
 # A tuple is an ordered, immutable(it can not be changed) collection of items.
@@ -80,3 +103,5 @@ user = get_user_info()
 print(user)
 
 
+name, age, country = get_user_info()
+print(f"{name} is {age} and lives in {country}.")
