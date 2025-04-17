@@ -67,34 +67,68 @@
 # for answer in responses:
 #     response_count[answer] = 
 
+# def group_by_domain(email_list):
+#     """
+#     Takes a list of email addresses and returns a dictionary
+#     where keys are domains and values are lists of usernames.
+#     """
+#     domain_dict = {  
+#         domain == emails.lower().split(@)
+# #     word_count = {}
+    
+# #     for word in words:
+# #         # Remove punctuation (simple approach)
+# #         word = word.strip('.,!?;:"\'()[]{}')
+        
+#     }
+
+#     # TODO: Fill in logic to populate domain_dict
+
+#     return domain_dict
+
+# print(group_by_domain)
+# # Example input (students can add their own)
+# emails = [
+#     "alice@gmail.com",
+#     "bob@yahoo.com",
+#     "carol@gmail.com",
+#     "dave@outlook.com"
+# ]
+
+# # Call the function and print the result
+# result = group_by_domain(emails)
+# print(result)
+
+
+# for email in emails:
+#     splitEmail = email.split('@')
+#     print(splitEmail)
+#     if splitEmail[1] in domain_dict:
+#         domain_dict[splitEmail[1]]
+
+
 def group_by_domain(email_list):
     """
     Takes a list of email addresses and returns a dictionary
     where keys are domains and values are lists of usernames.
     """
-    domain_dict = {  
-        domain = emails.lower().split(@)
-#     word_count = {}
-    
-#     for word in words:
-#         # Remove punctuation (simple approach)
-#         word = word.strip('.,!?;:"\'()[]{}')
-        
-    }
-
+    domain_dict = {}
     # TODO: Fill in logic to populate domain_dict
-
+    for email in emails :
+        splitEmail = email.split("@")
+        print(splitEmail)
+        if splitEmail[1] in domain_dict:
+            domain_dict[splitEmail[1]].append(splitEmail[0])
+        else:
+            domain_dict[splitEmail[1]] = [splitEmail[0]]
     return domain_dict
-
-print(group_by_domain)
 # Example input (students can add their own)
 emails = [
-    "alice@gmail.com",
+    "alysha@gmail.com",
     "bob@yahoo.com",
-    "carol@gmail.com",
-    "dave@outlook.com"
+    "andria@icloud.com",
+    "thomas@gmail.com"
 ]
-
 # Call the function and print the result
 result = group_by_domain(emails)
 print(result)

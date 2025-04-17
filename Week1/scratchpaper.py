@@ -159,9 +159,10 @@ highest_score = max(gradebook.values()) # Replace with your code
 
 # TODO: Create a dictionary with only passing students (score >= 60)
 
-passing_students = {k: v >= 60}  # Replace with your code
+passing_students = {for k in gradebook >= 60}  # Replace with your code
 
 # Print results
 print("Average score:", average_score)
 print("Highest score:", highest_score)
 print("Passing students:", passing_students)
+
