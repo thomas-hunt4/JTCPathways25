@@ -1,7 +1,7 @@
 # Examples of importing in Python
 
-from myfunctions import module
-# import module 
+# from . import module
+import module 
 
 def main () -> None:
     # Entrypoint of program
