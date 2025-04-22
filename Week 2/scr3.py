@@ -62,8 +62,20 @@
 
 
 
-print(f"math import test {math.pi}")
+# print(f"math import test {math.pi}")
 
-import math as m
+# import math as m
 
-print(f"this is math with an alias {m.pi}")
+# print(f"this is math with an alias {m.pi}")
+
+
+
+def calc_avg(numbers):
+        for value in numbers:
+    # if avg in calc_avg == 0:
+    #     return "Nothing on list"
+    # else:
+            numbers = sum(calc_avg(value))/len(calc_avg(value))
+            return numbers
+    
+print(calc_avg([8,8,8,10,6]))

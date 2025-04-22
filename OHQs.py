@@ -39,15 +39,15 @@
 # ***********line break*****************
 
 def count_occurrences(count_list) -> dict:
-    my_list = { 
+    my_dictionary = dict()
 
-    }
-
-    for val in count_list:
-        if val in my_list:
-            my_list =+ 1
-    else:
-            my_list = 1
-    return my_list
+    for key in count_list:
+        if key in my_dictionary:
+            my_dictionary[key] += 1
+        else:
+            my_dictionary[key] = 1
+    
+    
+    return my_dictionary
 
 print(count_occurrences([1, 2, 3, 1, 2, 1]))

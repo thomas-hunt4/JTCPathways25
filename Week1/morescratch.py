@@ -132,3 +132,77 @@ emails = [
 # Call the function and print the result
 result = group_by_domain(emails)
 print(result)
+
+
+
+
+
+try:
+        ofile = open(filepath, "w+")
+    except Exception as e:
+            print("File not found")
+    try:
+        for char in write_file:
+            ofile.write(char + "\n")
+    except:
+        return False
+    
+        ofile.seek(0,0)
+    
+        content = ofile.read()
+
+    
+        ofile.close()
+
+    return True
+
+
+def read_file(filepath):
+   
+    # TODO:
+    if not os.path.isfile(filepath):
+        raise FileNotFoundError(f"The file does not exist at {filepath}")
+    with open(filepath, 'r', encoding = 'utf-8') as f:
+        contents = f.read()
+    return contents
+    pass
+def write_file(filepath, content):
+    """
+    Write content to a file.
+    Args:
+        filepath (str): Path to the file
+        content (str): Content to write
+    Returns:
+        bool: True if successful
+    """
+    # TODO: Implement this function
+    try:
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(content)
+        return True
+    except Exception: # if errors found then false
+        return False
+    pass
+def file_exists(filepath):
+    """
+    Check if a file exists.
+    Args:
+        filepath (str): Path to the file
+    Returns:
+        bool: True if the file exists, False otherwise
+    """
+    # TODO: Implement this function
+    return os.path.isfile(filepath)
+    pass
+def get_file_extension(filepath):
+    """
+    Get the extension of a file.
+    Args:
+        filepath (str): Path to the file
+    Returns:
+        str: File extension (e.g., ".txt")
+    """
+    # TODO: Implement this function
+    _, ext = os.path.splitext(filepath)
+    return ext
+    pass
