@@ -28,3 +28,9 @@ print(music_library['pop'])
 # Task 3: Calculate the total duration of all songs in "hip-hop"
 # Your code heres
 
+total = 0
+for song in music_library['hip-hop']:
+    total += song['duration']
+
+print(total)  
+
